@@ -12,6 +12,7 @@ except ImportError:
     os.system("")
 
 SOURCE_FILE = "source.csv"
+STRINGS_FILE = "strings.txt"
 MAX_ITERATIONS = 200  # safety guard against infinite loops
 
 # ANSI escape codes for terminal color formatting
@@ -19,34 +20,6 @@ CLR_WHITE = "\033[1;37m"
 CLR_YELLOW = "\033[1;33m"
 CLR_GREEN = "\033[1;32m"
 CLR_RESET = "\033[0m"
-
-# Add/edit test strings here to batch-verify your rule pipeline.
-TEST_STRINGS = [
-    "18. novembra krastmala",
-    "50. skaitļa šoseja",
-    "uz 99. maija iela",
-    "uz 99. maija šķērsiela",
-    "uz Čiekurkalna 3. šķērsiela",
-    "uz Jaunā iela",
-    "uz Mazā Nometņu iela",
-    "pēc 500 metri",
-    "pēc 1.2 kilometri",
-    "pēc 1.5 kilometri",
-    "pēc 5.6 kilometri",
-    "pēc 13.7 kilometri",
-    "pēc 21.6 kilometri",
-    "pēc 30.7 kilometri",
-    "pēc 55.6 kilometri",
-    "nākamos 500 metri",
-    "nākamos 1.3 kilometri",
-    "nākamos 1.5 kilometri",
-    "nākamos 5.6 kilometri",
-    "nākamos 13.7 kilometri",
-    "nākamos 21.6 kilometri",
-    "nākamos 30.7 kilometri",
-    "nākamos 55.6 kilometri",
-    
-]
 
 
 def _read_text(path):
@@ -64,6 +37,26 @@ def _read_text(path):
             last_error = e
             continue
     raise last_error
+
+
+def load_test_strings(path):
+    """Load one test string per line from a plain text file.
+    Blank lines and lines starting with # (comments) are skipped."""
+    if not os.path.exists(path):
+        print(f"WARNING: {path} not found — creating an empty one. "
+              f"Add one test string per line and re-run.")
+        with open(path, "w", encoding="utf-8") as f:
+            pass
+        return []
+
+    raw_text = _read_text(path)
+    strings = []
+    for line in raw_text.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        strings.append(line)
+    return strings
 
 
 def load_rules(path):
@@ -134,10 +127,15 @@ def apply_rules(text, rules, verbose=True):
     return text
 
 
-def run_batch(rules):
-    print(f"Running {len(TEST_STRINGS)} sample strings through {len(rules)} rules\n")
+def run_batch(rules, test_strings):
+    if not test_strings:
+        print(f"No test strings found in {STRINGS_FILE}. "
+              f"Add one string per line and re-run.")
+        return
+
+    print(f"Running {len(test_strings)} sample strings through {len(rules)} rules\n")
     print("=" * 70)
-    for original in TEST_STRINGS:
+    for original in test_strings:
         # INPUT in White (space below removed)
         print(f"\n{CLR_WHITE}INPUT: {original}{CLR_RESET}")
         result = apply_rules(original, rules, verbose=True)
@@ -167,7 +165,10 @@ def main():
     if mode == "i":
         run_interactive(rules)
     else:
-        run_batch(rules)
+        test_strings = load_test_strings(STRINGS_FILE)
+        run_batch(rules, test_strings)
+
+    input("\nDone. Press Enter to exit...")
 
 
 if __name__ == "__main__":
