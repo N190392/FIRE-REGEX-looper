@@ -22,7 +22,7 @@ python fire_regex.py
 ```
 You'll be asked to choose a mode:
  
-- **Batch (`b`)** — runs a predefined list of sample strings through the full pipeline and prints the step-by-step transformation for each. Edit the `TEST_STRINGS` list at the top of the script to add or change cases — a dedicated sample-strings file may replace this in future.
+- **Batch (`b`)** — runs a list of sample strings through the full pipeline and prints the step-by-step transformation for each. Edit the list in `strings.txt` to add or change cases.
 - **Interactive (`i`)** — type in your own string and see it transformed on demand.
 Each step prints which rule fired, its priority, and the before/after text, with the result of each transformation highlighted:
 <img width="638" height="356" alt="image" src="https://github.com/user-attachments/assets/55d19aa5-1be5-41ab-acbb-b667bd53cc86" />
