@@ -135,6 +135,7 @@ def run_batch(rules, test_strings):
 
     print(f"Running {len(test_strings)} sample strings through {len(rules)} rules\n")
     print("=" * 70)
+    results = []
     for original in test_strings:
         # INPUT in White (space below removed)
         print(f"\n{CLR_WHITE}INPUT: {original}{CLR_RESET}")
@@ -142,6 +143,12 @@ def run_batch(rules, test_strings):
         # RESULT in Green (space above removed)
         print(f"  {CLR_GREEN}RESULT: {original}  ->  {result}{CLR_RESET}")
         print("=" * 70)
+        results.append((original, result))
+
+    # --- Summary ---
+    print(f"\n{CLR_WHITE}=== Summary ==={CLR_RESET}\n")
+    for i, (original, result) in enumerate(results, start=1):
+        print(f"{i}. {original} | {CLR_GREEN}{result}{CLR_RESET}")
 
 
 def run_interactive(rules):
