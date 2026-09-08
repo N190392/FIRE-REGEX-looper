@@ -1,1 +1,148 @@
-\s{2,}	 	200\buz (.+) (ðíçrs)?iela\b	uz $1 $2ielu	200\buz (.+) (ðíçrs)?lînija\b	uz $1 $2lîniju	200\buz (.+) gatve\b	uz $1 gatvi	200\buz (.+) ceïð\b	uz $1 ceïu	200\buz (.+) bulvâris\b	uz $1 bulvâri	200\buz (.+) maìistrâle\b	uz $1 maìistrâli	200\buz (.+) prospekts\b	uz $1 prospektu	200\buz (.+) ðoseja\b	uz $1 ðoseju	200\buz (.+) laukums\b	uz $1 laukumu	200\buz (.+) krastmala\b	uz $1 krastmalu	200\b1\.\s+(\w+a)\b	pirmâ $1	130\b2\.\s+(\w+a)\b	otrâ $1	130\b3\.\s+(\w+a)\b	treðâ $1	130\b4\.\s+(\w+a)\b	ceturtâ $1	130\b5\.\s+(\w+a)\b	piektâ $1	130\b6\.\s+(\w+a)\b	sestâ $1	130\b7\.\s+(\w+a)\b	septîtâ $1	130\b8\.\s+(\w+a)\b	astotâ $1	130\b9\.\s+(\w+a)\b	devîtâ $1	130\b10\.\s+(\w+a)\b	desmitâ $1	130\b11\.\s+(\w+a)\b	vienpadsmitâ $1	130\b12\.\s+(\w+a)\b	divpadsmitâ $1	130\b13\.\s+(\w+a)\b	trîspadsmitâ $1	130\b14\.\s+(\w+a)\b	èetrpadsmitâ $1	130\b15\.\s+(\w+a)\b	piecpadsmitâ $1	130\b16\.\s+(\w+a)\b	seðpadsmitâ $1	130\b17\.\s+(\w+a)\b	septiòpadsmitâ $1	130\b18\.\s+(\w+a)\b	astoòpadsmitâ $1	130\b19\.\s+(\w+a)\b	deviòpadsmitâ $1	130\b20\.\s+(\w+a)\b	divdesmitâ $1	130\b30\.\s+(\w+a)\b	trîsdesmitâ $1	130\b40\.\s+(\w+a)\b	èetrdesmitâ $1	130\b50\.\s+(\w+a)\b	piecdesmitâ $1	130\b60\.\s+(\w+a)\b	seðdesmitâ $1	130\b70\.\s+(\w+a)\b	septiòdesmitâ $1	130\b80\.\s+(\w+a)\b	astoòdesmitâ $1	130\b90\.\s+(\w+a)\b	deviòdesmitâ $1	130\b2(?:0|([1-9]))	divdesmit $1	140\b3(?:0|([1-9]))	trîsdesmit $1	140\b4(?:0|([1-9]))	èetrdesmit $1	140\b5(?:0|([1-9]))	piecdesmit $1	140\b6(?:0|([1-9]))	seðdesmit $1	140\b7(?:0|([1-9]))	septiòdesmit $1	140\b8(?:0|([1-9]))	astoòdesmit $1	140\b9(?:0|([1-9]))	deviòdesmit $1	140(\.1|100)\b	simts	80(\.2|200)\b	divsimt	80(\.3|300)\b	trîssimt	80(\.4|400)\b	èetrsimt	80(\.5|500)\b	piecsimt	80(\.6|600)\b	seðsimt	80(\.7|700)\b	septiòsimt	80(\.8|800)\b	astoòsimt	80(\.9|900)\b	deviòsimt	80\b(pçc|nâkamos) 11\b	$1 vienpadsmit	90\b(pçc|nâkamos) 12\b	$1 divpadsmit	90\b(pçc|nâkamos) 13\b	$1 trîspadsmit	90\b(pçc|nâkamos) 14\b	$1 èetrpadsmit	90\b(pçc|nâkamos) 15\b	$1 piecpadsmit	90\b(pçc|nâkamos) 16\b	$1 seðpadsmit	90\b(pçc|nâkamos) 17\b	$1 septiòpadsmit	90\b(pçc|nâkamos) 18\b	$1 astoòpadsmit	90\b(pçc|nâkamos) 19\b	$1 deviòpadsmit	90\bpçc 1\.0 kilometri\b	pçc viena kilometra	50\bpçc 1\.([1-9]) kilometri\b	pçc viena kilometra un .$1 metriem	50\bpçc 1\.5 kilometri\b	pçc pusotra kilometra	40\bpçc 2\.0 kilometri\b	pçc diviem kilometriem	50\bpçc 2\.([1-9]) kilometri\b	pçc diviem kilometriem un .$1 metriem	50\bpçc ([3-9]|\d{2,})\.\d\b	pçc $1	60\bpçc (\d*(?<!1)1) (kilo)?metri\b	pçc $1 $2metra	70\bpçc (\d+(?:\.\d+)?) (kilo)?metri\b	pçc $1 $2metriem	70\b(pçc)(?: (\w+desmit))? 1\b	$1 $2 viena	130\b(pçc)(?: (\w+desmit))? 2\b	$1 $2 diviem	130\b(pçc)(?: (\w+desmit))? 3\b	$1 $2 trim	130\b(pçc)(?: (\w+desmit))? 44\b	$1 $2 èetriem	130\b(pçc)(?: (\w+desmit))? 5\b	$1 $2 pieciem	130\b(pçc)(?: (\w+desmit))? 6\b	$1 $2 seðiem	130\b(pçc)(?: (\w+desmit))? 7\b	$1 $2 septiòiem	130\b(pçc)(?: (\w+desmit))? 8\b	$1 $2 astoòiem	130\b(pçc)(?: (\w+desmit))? 9\b	$1 $2 deviòiem	130\bnâkamos 1\.0 kilometri\b	nâkamo kilometru	50\bnâkamos 1\.([1-9]) kilometri\b	nâkamo kilometru un .$1 metrus	50\bnâkamos 1\.5 kilometri\b	nâkamo pusotru kilometru	40\bnâkamos 2\.0 kilometri\b	nâkamos divus kilometrus	50\bnâkamos 2\.([1-9]) kilometri\b	nâkamos divus kilometrusm un .$1 metrus	50\bnâkamos ([3-9]|\d{2,})\.\d\b	nâkamos $1	60\bnâkamos (\d*(?<!1)1) (kilo)?metri\b	nâkamo $1 $2metru	70\bnâkamos (\d+(?:\.\d+)?) (kilo)?metri\b	nâkamos $1 $2metrus	70\b(nâkamo)(?: (\w+desmit))? 1\b	$1 $2 vienu	130\b(nâkamos)(?: (\w+desmit))? 2\b	$1 $2 divus	130\b(nâkamos)(?: (\w+desmit))? 3\b	$1 $2 trîs	130\b(nâkamos)(?: (\w+desmit))? 4\b	$1 $2 èetrus	130\b(nâkamos)(?: (\w+desmit))? 5\b	$1 $2 piecus	130\b(nâkamos)(?: (\w+desmit))? 6\b	$1 $2 seðus	130\b(nâkamos)(?: (\w+desmit))? 7\b	$1 $2 septiòus	130\b(nâkamos)(?: (\w+desmit))? 8\b	$1 $2 astoòus	130\b(nâkamos)(?: (\w+desmit))? 9\b	$1 $2 deviòus	130\buz (\w+)â(?=.*\b(?:ielu|gatvi|bulvâri|prospektu|ðoseju|krastmalu|maìistrâli|lîniju)\b)	uz $1o	250\b(\w+)â (\w*ielu|\w*gatvi|\w*bulvâri|\w*prospektu|\w*ðoseju|\w*krastmalu|\w*maìistrâli|\w*lîniju)\b	$1o $2	250
+\s{2,}	 	200
+\b(uz|pa) (.+) (Å¡Ä·Ä“rs)?iela\b	$1 $2 $3ielu	200
+\b(uz|pa) (.+) (Å¡Ä·Ä“rs)?lÄ«nija\b	$1 $2 $3lÄ«niju	200
+\b(uz|pa) (.+) (krast|ost)?mala\b	$1 $2 $3malu	200
+\b(uz|pa) (.+) (apved)?ceÄ¼Å¡\b	$1 $2 $3ceÄ¼u	200
+\b(uz|pa) (.+) aleja\b	$1 $2 aleju	200
+\b(uz|pa) (.+) bulvÄris\b	$1 $2 bulvÄri	200
+\b(uz|pa) (.+) dambis\b	$1 $2 dambi	200
+\b(uz|pa) (.+) gatve\b	$1 $2 gatvi	200
+\b(uz|pa) (.+) gÄte\b	$1 $2 gÄti	200
+\b(uz|pa) (.+) laukums\b	$1 $2 laukumu	200
+\b(uz|pa) (.+) maÄ£istrÄle\b	$1 $2 maÄ£istrÄli	200
+\b(uz|pa) (.+) prospekts\b	$1 $2 prospektu	200
+\b(uz|pa) (.+) Å¡oseja\b	$1 $2 Å¡oseju	200
+\b(uz|pa) (.+) tilts\b	$1 $2 tiltu	200
+		
+\b(uz|pa) (\w+)(?:Ä|ais)\b(?=.*\b(?:ielu|dambi|tiltu|gÄti|aleju|gatvi|ceÄ¼u|bulvÄri|prospektu|Å¡oseju|malu|maÄ£istrÄli|lÄ«niju)\b)	$1 $2o	250
+\b(\w+)Ä (\w*ielu|\w*gatvi|\w*ceÄ¼u|\w*aleju|\w*bulvÄri|\w*prospektu|\w*Å¡oseju|\w*malu|\w*maÄ£istrÄli|\w*lÄ«niju|\w*dambi|\w*tiltu|\w*gÄti)\b	$1o $2	250
+		
+\b1\.\s+(\w+a)\b	pirmÄ $1	130
+\b2\.\s+(\w+a)\b	otrÄ $1	130
+\b3\.\s+(\w+a)\b	treÅ¡Ä $1	130
+\b4\.\s+(\w+a)\b	ceturtÄ $1	130
+\b5\.\s+(\w+a)\b	piektÄ $1	130
+\b6\.\s+(\w+a)\b	sestÄ $1	130
+\b7\.\s+(\w+a)\b	septÄ«tÄ $1	130
+\b8\.\s+(\w+a)\b	astotÄ $1	130
+\b9\.\s+(\w+a)\b	devÄ«tÄ $1	130
+\b10\.\s+(\w+a)\b	desmitÄ $1	130
+\b11\.\s+(\w+a)\b	vienpadsmitÄ $1	130
+\b12\.\s+(\w+a)\b	divpadsmitÄ $1	130
+\b13\.\s+(\w+a)\b	trÄ«spadsmitÄ $1	130
+\b14\.\s+(\w+a)\b	ÄetrpadsmitÄ $1	130
+\b15\.\s+(\w+a)\b	piecpadsmitÄ $1	130
+\b16\.\s+(\w+a)\b	seÅ¡padsmitÄ $1	130
+\b17\.\s+(\w+a)\b	septiÅ†padsmitÄ $1	130
+\b18\.\s+(\w+a)\b	astoÅ†padsmitÄ $1	130
+\b19\.\s+(\w+a)\b	deviÅ†padsmitÄ $1	130
+\b20\.\s+(\w+a)\b	divdesmitÄ $1	130
+\b30\.\s+(\w+a)\b	trÄ«sdesmitÄ $1	130
+\b40\.\s+(\w+a)\b	ÄetrdesmitÄ $1	130
+\b50\.\s+(\w+a)\b	piecdesmitÄ $1	130
+\b60\.\s+(\w+a)\b	seÅ¡desmitÄ $1	130
+\b70\.\s+(\w+a)\b	septiÅ†desmitÄ $1	130
+\b80\.\s+(\w+a)\b	astoÅ†desmitÄ $1	130
+\b90\.\s+(\w+a)\b	deviÅ†desmitÄ $1	130
+
+\b10\b	desmit	140		
+\b2(?:0|([1-9]))	divdesmit $1	140
+\b3(?:0|([1-9]))	trÄ«sdesmit $1	140
+\b4(?:0|([1-9]))	Äetrdesmit $1	140
+\b5(?:0|([1-9]))	piecdesmit $1	140
+\b6(?:0|([1-9]))	seÅ¡desmit $1	140
+\b7(?:0|([1-9]))	septiÅ†desmit $1	140
+\b8(?:0|([1-9]))	astoÅ†desmit $1	140
+\b9(?:0|([1-9]))	deviÅ†desmit $1	140
+		
+(\.1|100)\b	simts	80
+(\.2|200)\b	divsimt	80
+(\.3|300)\b	trÄ«ssimt	80
+(\.4|400)\b	Äetrsimt	80
+(\.5|500)\b	piecsimt	80
+(\.6|600)\b	seÅ¡simt	80
+(\.7|700)\b	septiÅ†simt	80
+(\.8|800)\b	astoÅ†simt	80
+(\.9|900)\b	deviÅ†simt	80
+		
+\b(pÄ“c|nÄkamos|ietaup\w*|papildu|sastrÄ“gumÄ) 11\b	$1 vienpadsmit	90
+\b(pÄ“c|nÄkamos|ietaup\w*|papildu|sastrÄ“gumÄ) 12\b	$1 divpadsmit	90
+\b(pÄ“c|nÄkamos|ietaup\w*|papildu|sastrÄ“gumÄ) 13\b	$1 trÄ«spadsmit	90
+\b(pÄ“c|nÄkamos|ietaup\w*|papildu|sastrÄ“gumÄ) 14\b	$1 Äetrpadsmit	90
+\b(pÄ“c|nÄkamos|ietaup\w*|papildu|sastrÄ“gumÄ) 15\b	$1 piecpadsmit	90
+\b(pÄ“c|nÄkamos|ietaup\w*|papildu|sastrÄ“gumÄ) 16\b	$1 seÅ¡padsmit	90
+\b(pÄ“c|nÄkamos|ietaup\w*|papildu|sastrÄ“gumÄ) 17\b	$1 septiÅ†padsmit	90
+\b(pÄ“c|nÄkamos|ietaup\w*|papildu|sastrÄ“gumÄ) 18\b	$1 astoÅ†padsmit	90
+\b(pÄ“c|nÄkamos|ietaup\w*|papildu|sastrÄ“gumÄ) 19\b	$1 deviÅ†padsmit	90
+		
+\bpÄ“c 1\.0 kilometri\b	pÄ“c viena kilometra	50
+\bpÄ“c 1\.([1-9]) kilometri\b	pÄ“c viena kilometra un .$1 metriem	50
+\bpÄ“c 1\.5 kilometri\b	pÄ“c pusotra kilometra	40
+\bpÄ“c 2\.0 kilometri\b	pÄ“c diviem kilometriem	50
+\bpÄ“c 2\.([1-9]) kilometri\b	pÄ“c diviem kilometriem un .$1 metriem	50
+\bpÄ“c 2\.5 kilometri\b	pÄ“c divarpus kilometriem	40
+\bpÄ“c ([3-9]|\d{2,})\.\d\b	pÄ“c $1	60
+\bpÄ“c (\d*(?<!1)1) (kilo)?metri\b	pÄ“c $1 $2metra	70
+\bpÄ“c (\d+(?:\.\d+)?) (kilo)?metri\b	pÄ“c $1 $2metriem	70
+\b(pÄ“c(?: \w+desmit)? )1\b	$1viena	130
+\b(pÄ“c(?: \w+desmit)? )2\b	$1diviem	130
+\b(pÄ“c(?: \w+desmit)? )3\b	$1trim	130
+\b(pÄ“c(?: \w+desmit)? )4\b	$1Äetriem	130
+\b(pÄ“c(?: \w+desmit)? )5\b	$1pieciem	130
+\b(pÄ“c(?: \w+desmit)? )6\b	$1seÅ¡iem	130
+\b(pÄ“c(?: \w+desmit)? )7\b	$1septiÅ†iem	130
+\b(pÄ“c(?: \w+desmit)? )8\b	$1astoÅ†iem	130
+\b(pÄ“c(?: \w+desmit)? )9\b	$1deviÅ†iem	130
+		
+\bnÄkamos 1\.0 kilometri\b	nÄkamo kilometru	50
+\bnÄkamos 1\.([1-9]) kilometri\b	nÄkamo kilometru un .$1 metrus	50
+\bnÄkamos 1\.5 kilometri\b	nÄkamo pusotru kilometru	40
+\bnÄkamos 2\.0 kilometri\b	nÄkamos divus kilometrus	50
+\bnÄkamos 2\.([1-9]) kilometri\b	nÄkamos divus kilometrus un .$1 metrus	50
+\bnÄkamos 2\.5 kilometri\b	nÄkamos divarpus kilometrus	40
+\bnÄkamos ([3-9]|\d{2,})\.\d\b	nÄkamos $1	60
+\bnÄkamos (\d*(?<!1)1) (kilo)?metri\b	nÄkamo $1 $2metru	70
+\bnÄkamos (\d+(?:\.\d+)?) (kilo)?metri\b	nÄkamos $1 $2metrus	70
+\b(nÄkamo(?: \w+desmit)? )1\b	$1vienu	130
+\b(nÄkamos(?: \w+desmit)? )2\b	$1divus	130
+\b(nÄkamos(?: \w+desmit)? )3\b	$1trÄ«s	130
+\b(nÄkamos(?: \w+desmit)? )4\b	$1Äetrus	130
+\b(nÄkamos(?: \w+desmit)? )5\b	$1piecus	130
+\b(nÄkamos(?: \w+desmit)? )6\b	$1seÅ¡us	130
+\b(nÄkamos(?: \w+desmit)? )7\b	$1septiÅ†us	130
+\b(nÄkamos(?: \w+desmit)? )8\b	$1astoÅ†us	130
+\b(nÄkamos(?: \w+desmit)? )9\b	$1deviÅ†us	130
+
+\b(ietaup\w*) (\d*(?<!1)1) minÅ«tes\b	$1 $2 minÅ«ti	70
+\b((?:ietaup\w*)(?: \w+desmit)? )1\b	$1vienu	130
+\b(sastrÄ“gumÄ|papildu) (\d*(?<!1)1) minÅ«tes\b	$1 $2 minÅ«te	70
+\b((?:sastrÄ“gumÄ|papildu)(?: \w+desmit)? )1\b	$1viena	130
+\b((?:sastrÄ“gumÄ|ietaup\w*|papildu)(?: \w+desmit)? )2\b	$1divas	130
+\b((?:sastrÄ“gumÄ|ietaup\w*|papildu)(?: \w+desmit)? )3\b	$1trÄ«s	130
+\b((?:sastrÄ“gumÄ|ietaup\w*|papildu)(?: \w+desmit)? )4\b	$1Äetras	130
+\b((?:sastrÄ“gumÄ|ietaup\w*|papildu)(?: \w+desmit)? )5\b	$1piecas	130
+\b((?:sastrÄ“gumÄ|ietaup\w*|papildu)(?: \w+desmit)? )6\b	$1seÅ¡as	130
+\b((?:sastrÄ“gumÄ|ietaup\w*|papildu)(?: \w+desmit)? )7\b	$1septiÅ†as	130
+\b((?:sastrÄ“gumÄ|ietaup\w*|papildu)(?: \w+desmit)? )8\b	$1astoÅ†as	130
+\b((?:sastrÄ“gumÄ|ietaup\w*|papildu)(?: \w+desmit)? )9\b	$1deviÅ†as	130
+
+\b(?:(\w+desmit ))?1(?= minÅ«Å¡u\b)	$1vienu	120
+\b(?:(\w+desmit ))?2(?= minÅ«Å¡u\b)	$1divu	120
+\b(?:(\w+desmit ))?3(?= minÅ«Å¡u\b)	$1trÄ«s	120
+\b(?:(\w+desmit ))?4(?= minÅ«Å¡u\b)	$1Äetru	120
+\b(?:(\w+desmit ))?5(?= minÅ«Å¡u\b)	$1piecu	120
+\b(?:(\w+desmit ))?6(?= minÅ«Å¡u\b)	$1seÅ¡u	120
+\b(?:(\w+desmit ))?7(?= minÅ«Å¡u\b)	$1septiÅ†u	120
+\b(?:(\w+desmit ))?8(?= minÅ«Å¡u\b)	$1astoÅ†u	120
+\b(?:(\w+desmit ))?9(?= minÅ«Å¡u\b)	$1deviÅ†u	120
+
+\b(par) (\d*(?<!1)1) minÅ«tÄ“m\b	$1 $2 minÅ«ti	70
+\b(par(?: \w+desmit)? )1\b	$1vienu	130
+\b(par(?: \w+desmit)? )2\b	$1divÄm	130
+\b(par(?: \w+desmit)? )3\b	$1trim	130
+\b(par(?: \w+desmit)? )4\b	$1ÄetrÄm	130
+\b(par(?: \w+desmit)? )5\b	$1piecÄm	130
+\b(par(?: \w+desmit)? )6\b	$1seÅ¡Äm	130
+\b(par(?: \w+desmit)? )7\b	$1septiÅ†Äm	130
+\b(par(?: \w+desmit)? )8\b	$1astoÅ†Äm	130
+\b(par(?: \w+desmit)? )9\b	$1deviÅ†Äm	130
